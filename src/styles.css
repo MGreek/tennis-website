@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('img/wallpaper.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    min-width: 100vh;
+    min-height: 100vh;
+}

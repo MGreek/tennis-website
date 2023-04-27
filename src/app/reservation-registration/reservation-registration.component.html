@@ -1,0 +1,6 @@
+<div class="container">
+    <app-custom-button (click)="onReservationMenuClick()">Reservation menu</app-custom-button>
+    <app-custom-button (click)="onRegistrationMenuClick()">Registration menu</app-custom-button>
+</div>
+<app-reservation *ngIf="showReservationMenu"></app-reservation>
+<app-registration *ngIf="showRegistrationMenu"></app-registration>

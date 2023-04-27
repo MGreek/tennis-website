@@ -1,0 +1,27 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12pt;
+}
+
+table {
+    border: black solid 1px;
+    margin-left: 2px;
+}
+
+select {
+    margin-right: 2px;
+    min-width: 60px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    flex: 0% 0% 30%
+}
+
+.right {
+    flex: 0% 0% 70%
+}

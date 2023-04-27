@@ -1,0 +1,10 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12pt;
+}
+
+.container {
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 2px;
+}

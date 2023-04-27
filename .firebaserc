@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tennis-website-8b848": {
+      "hosting": {
+        "tennis-website": [
+          "tennis-website-8b848"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tennis-website-8b848"
+  }
+}

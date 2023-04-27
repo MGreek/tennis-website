@@ -1,0 +1,8 @@
+app-custom-button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12pt;
+}
+
+.highlight {
+    background-color: rgba(207, 102, 102, 0.815);
+}
