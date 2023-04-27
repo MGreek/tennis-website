@@ -1,14 +1,18 @@
 <div class="container">
     <div class="left">
-        <input placeholder="Username">
-        <input type="number" placeholder="Elo" min="0" max="3000">
-        <app-custom-button>Register</app-custom-button>
+        <input #username placeholder="Username">
+        <input #elo type="number" placeholder="Elo" min="0" max="3000">
+        <app-custom-button (click)="registerUser()">Register</app-custom-button>
     </div>
     <div class="right">
         <table>
             <tr>
                 <th>Username</th>
                 <th>Elo</th>
+            </tr>
+            <tr *ngFor="let row of rows">
+                <td>{{ row.username }}</td>
+                <td>{{ row.elo }}</td>
             </tr>
         </table>
     </div>
