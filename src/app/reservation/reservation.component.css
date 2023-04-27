@@ -25,3 +25,7 @@ select {
 .right {
     flex: 0% 0% 70%
 }
+
+.submitbutton {
+    margin-left: 2px;
+}

@@ -1,16 +1,31 @@
 <div class="container">
     <div class="left">
-        <select>
+        <select #location (change)="updateTable()">
             <option value="Gheorgheni">Gheorgheni</option>
             <option value="Florești">Florești</option>
         </select>
-        <select></select>
-        <select></select>
-        <input type="date" class="date-picker">
+        <select #playerA>
+            <option *ngFor="let username of playersA">
+                {{username}}
+            </option>
+        </select>
+        <select #playerB>
+            <option *ngFor="let username of playersB">
+                {{username}}
+            </option>
+        </select>
+        <input #time type="date" class="date-picker" (change)="updateTable()">
     </div>
     <table class="right">
         <tr>
             <th>Available hour(s)</th>
         </tr>
+        <tr *ngFor="let row of rows">
+            <label>
+                <input type="radio" name="hour" [value]="row" (change)="onChange($event)">
+                {{ row }}
+            </label>
+        </tr>
     </table>
+    <app-custom-button class="submitbutton" (click)="onSubmit()">Submit</app-custom-button>
 </div>

@@ -22,10 +22,24 @@ export class RegistrationComponent {
   {
     if (!this.rows.some((val) => { return val.username === this.username?.nativeElement.value; }))
     {
-      set(ref(this.db, 'users/' + this.username?.nativeElement.value), {
-        username: this.username?.nativeElement.value,
-        elo: this.elo?.nativeElement.value
-      });
+      if (this.username?.nativeElement.value.trim() === '')
+      {
+        alert("Username needs characters.");
+      }
+      else
+      {
+        if (this.elo?.nativeElement.value.trim() == '')
+        {
+          alert("Elo needs to be a number.");
+        }
+        else
+        {
+          set(ref(this.db, 'users/' + this.username?.nativeElement.value), {
+            username: this.username?.nativeElement.value,
+            elo: this.elo?.nativeElement.value
+          });
+        }
+      }
     }
     else
     {
@@ -38,5 +52,6 @@ export class RegistrationComponent {
     snapshot.forEach((childSnapshot: any) => {
       this.rows.push({ username: childSnapshot.val().username, elo: childSnapshot.val().elo });
     })
+    this.rows.sort((a: User, b: User) => { if (a.elo != b.elo) { return b.elo - a.elo; } if (a.username < b.username) { return 1; } return -1;  });
   }
 }
